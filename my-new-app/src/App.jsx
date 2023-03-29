@@ -26,10 +26,15 @@ function App() {
       name: "mew",
     },
   ];
+  useEffect(() => {
+    alert("hello pokemon trainer :)");
+  }, []);
   const [pokemonIndex, setPokemonInex] = useState(0);
 
   let pokemon = pokemonList[pokemonIndex];
-
+  if (pokemon.name === "pikachu") {
+    alert("pika pikachu !!!");
+  }
   const hendleSuivant = () => {
     if (pokemonIndex >= pokemonList.length - 1) {
       alert("index superieur");
